@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bg {
+  background-image: url(../../../assets/img/img_container.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0 16px 16px 0;
+  margin: -3px;
+  margin-top: 1px;
+  margin-bottom: 0px;
+}
+
+.form-login {
+  background: white;
+  width: 50%;
+  margin: auto;
+  border-radius: 16px;
+  font-family: sans-serif;
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-login h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.controls {
+  width: 100%;
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 16px;
+  border: 1px solid #B59AC3;
+  font-family: 'calibri';
+  font-size: 18px;
+}

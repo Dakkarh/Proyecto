@@ -1,0 +1,117 @@
+<!-- <div class="form-register shadow my-5">
+  <div class="row align-items-lg-stretch p-2">
+    <div class="col-12 ">
+
+      <form action="#" class="p-3" [formGroup]="myForm" (ngSubmit)="submitForm()" novalidate>
+        <div class="text-center">
+          <label class="fs-2 my-3">REGISTRO</label>
+        </div>
+        <div class="mb-3">
+          <label for="text" class="form-label">Nombre:</label>
+          <input type="text" class="controls form-control" formControlName="name" name="name" placeholder="Nombre">
+        </div>
+        <div class="mb-3">
+          <label for="text" class="form-label">Apellido:</label>
+          <input type="text" class="controls form-control" formControlName="lastName" name="lastname"
+            placeholder="Apellidos">
+        </div>
+        <div class="mb-3">
+          <label for="document" class="form-label">Documento:</label>
+          <input type="text" class="controls form-control" formControlName="document" name="document"
+            placeholder="Documento">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo:</label>
+          <input type="email" class="controls form-control" formControlName="email" name="email"
+            placeholder="Correo electronico">
+        </div>
+        <div class="mb-3">
+          <label for="Password" class="form-label">Contraseña:</label>
+          <input type="password" class="controls form-control" formControlName="password" name="password"
+            placeholder="Contraseña">
+        </div>
+        <div class="mb-3">
+          <label for="text" class="form-label">Dirección:</label>
+          <input type="text" class="controls form-control" formControlName="address" name="address"
+            placeholder="Dirección">
+        </div>
+        <div >
+          <select class="form-select w-50" formControlName="gender" name="gender" aria-label="Default select example">
+            <option selected>Seleccionar genero</option>
+            <option value="M">Hombre</option>
+            <option value="F">Mujer</option>
+            <option value="I">Indefinido</option>
+          </select>
+        </div>
+        <div class="text-center mt-3">
+          <button type="submit" class="btn btn-primary mt-3 p-1 w-100">Registrarse</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="container col-7 d-flex justify-content-center p-4 shadow rounded-5 form-register">
+
+  <form class="row col-7 text" [formGroup]="myForm" (ngSubmit)="submitForm()" novalidate>
+
+    <div class="text-center">
+      <label class="fs-2 my-3 text">REGISTRO</label>
+    </div>
+
+    <div class="col-6">
+      <label for="nameInput">Nombre</label>
+      <input type="text" value="name" id="nameInput" formControlName="name" class="form-control controls" placeholder="Nombre" required>
+    </div>
+
+    <div class="col-6">
+      <label for="apellidoInput">Apellido</label>
+      <input type="text" id="apellidoInput" formControlName="lastName" class="form-control controls" placeholder="Apellido" required>
+    </div>
+
+    <div class="col-12">
+      <label for="documentInput">Documento</label>
+      <input type="text" id="documentInput" formControlName="document" class="form-control controls" placeholder="Ingrese su documento" required>
+    </div>
+
+    <div class="col-12">
+      <label for="emailInput" >Correo</label>
+      <input type="email" id="emailInput" formControlName="email" class="form-control controls"  placeholder="Ingrese su correo" required>
+    </div>
+
+    <div class="col-12">
+      <label for="passwordInput">Contraseña</label>
+      <input type="password" id="passwordInput" formControlName="password" class="form-control controls"placeholder="Escriba su contraseña" required>
+    </div>
+
+    <div class="col-12">
+      <label for="dateInput">Fecha de nacimiento</label>
+      <input type="date" id="dateInput" formControlName="date" class="form-control controls" placeholder="Ingrese su dirección" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="text" class="form-label">Dirección:</label>
+      <input type="text" class="controls form-control" formControlName="address" name="address"
+        placeholder="Dirección">
+    </div>
+
+    <div class="col-7">
+      <select name="gender" formControlName="gender" id="gender" class="form-select controls" required>
+        <option value="" selected>Seleccionar Genero</option>
+        <option value="M">Masculino</option>
+        <option value="F">Femenino</option>
+        <option value="I">Indefinido</option>
+      </select>
+    </div>
+
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary mt-3 p-1 w-50">Registrarse</button>
+    </div>
+
+    <div class="text-center col-12 text-footer mt-3 text-secondary">© 2023 IsmarSpa. Todos los derechos reservados.</div>
+  </form>
+
+  <div class="col bg d-none d-lg-block m-5"></div>
+
+</div>

@@ -1,0 +1,45 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.form-register h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.form-register small{
+  font-size: 10px;
+}
+*/
+.controls {
+  width: 100%;
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 16px;
+  border: 1px solid #B59AC3;
+  font-family: 'calibri';
+  font-size: 18px;
+}
+.text{
+  font-family: 'Roboto';
+}
+
+.form-register {
+  box-shadow: #B59AC3;
+  margin: auto;
+  font-family: sans-serif;
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bg {
+  background-image: url(../../../assets/img/logo.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 0 16px 16px 0;
+}
