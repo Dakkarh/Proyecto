@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: '',component: PrincipalComponent,children: [
       {path: 'clientes', component: ClientesComponent},
-      { path: '', redirectTo: 'login', pathMatch: 'full' }
+      { path: '', redirectTo: 'inicio', pathMatch: 'full' }
     ]
   },
 

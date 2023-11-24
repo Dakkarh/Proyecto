@@ -1,44 +1,118 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-.bg {
-  background-image: url(../../../assets/img/img_container.png);
-  background-position: center center;
+.olvidarcontra {
+  font-family: 'Skeina', sans-serif;
+}
+
+.logo{
+  width: 40px;
+}
+
+.body {
+  background-image: url("https://www.zarla.com/images/zarla-spa-logos-6010x4012-20220113.jpeg?crop=2:1,smart&width=1200&dpr=2");
+  background-size: 100%;
   background-repeat: no-repeat;
+  image-resolution: auto;
   background-size: cover;
-  border-radius: 0 16px 16px 0;
-  margin: -3px;
-  margin-top: 1px;
-  margin-bottom: 0px;
+  display: flex;
+  justify-content: flex-end;
+  min-height: 100vh;
 }
 
-.form-login {
-  background: white;
-  width: 50%;
-  margin: auto;
-  border-radius: 16px;
-  font-family: sans-serif;
-  color: black;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+img {
+  margin-top: 0;
+  margin-left: 0;
 }
 
-.form-login h4 {
-  font-size: 22px;
-  margin-bottom: 20px;
+.contenedor {
+  display: flex;
+  text-align: center;
+  width: 380px;
+  height: auto;
+  background-color: transparent;
+  backdrop-filter: blur(12px);
+  padding: 20px;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.controls {
-  width: 100%;
+.titulo {
+  color: white;
+  margin-bottom: 40px;
+  font-family: 'Skeina', sans-serif;
+}
+
+input {
+  background-color: transparent;
+  border-radius: 2px;
+  border: 1px solid white;
   padding: 10px;
-  border-radius: 15px;
-  margin-bottom: 16px;
-  border: 1px solid #B59AC3;
-  font-family: 'calibri';
-  font-size: 18px;
+  margin: 8px;
+  min-width: 200px;
+  font-family: 'Skeina', sans-serif;
+}
+
+::placeholder {
+  color: white;
+}
+
+.ingresar {
+  background-color: #B544EC;
+  border: 1px solid #B544EC;
+  color: white;
+  padding: 10px;
+  margin: 20px;
+  min-width: 150px;
+  border-radius: 3px;
+  font-family: 'Roboto', sans-serif;
+}
+
+button:hover {
+  background-color: #B544EC;
+  cursor: pointer;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Skeina', sans-serif;
+}
+
+.ismartitulo {
+  color: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 10px;
+  font-size: 3.8vh;
+  text-decoration: none;
+  font-family: 'Skeina', sans-serif;
+  text-align: center;
+}
+
+p {
+  color: white;
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  margin: 20px;
+}
+
+.registrar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 20px;
+  font-family: 'Roboto', sans-serif;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 10px;
+  margin: 20px;
+  min-width: 150px;
+  border-radius: 3px;
 }

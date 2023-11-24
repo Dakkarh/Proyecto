@@ -5,11 +5,7 @@ import { RolesComponent } from './components/roles/roles.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { ClientesComponent } from './components/clientes/clientes.component';
-import {MatPaginatorModule} from '@angular/material/paginator';
-import {MatSortModule} from '@angular/material/sort';
-import {MatTableModule} from '@angular/material/table';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
+
 
 
 @NgModule({
@@ -22,11 +18,6 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     CommonModule,
     DashboardRoutingModule,
     SharedModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatTableModule,
-    MatInputModule,
-    MatFormFieldModule
   ]
 })
 export class DashaboardModule { }

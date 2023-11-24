@@ -1,45 +1,94 @@
-/* * {
+* {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-.form-register h4 {
-  font-size: 22px;
-  margin-bottom: 20px;
+.menu {
+  display: inline-block;
+  top: 0;
+  left: 0;
 }
 
-.form-register small{
-  font-size: 10px;
-}
-*/
-.controls {
-  width: 100%;
-  padding: 10px;
-  border-radius: 15px;
-  margin-bottom: 16px;
-  border: 1px solid #B59AC3;
-  font-family: 'calibri';
-  font-size: 18px;
-}
-.text{
-  font-family: 'Roboto';
-}
-
-.form-register {
-  box-shadow: #B59AC3;
-  margin: auto;
-  font-family: sans-serif;
-  color: black;
+.ismartitulo {
+  color: white;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 0;
+  top: 0;
+  margin: 10px;
+  font-size: 3.8vh;
+  text-decoration: none;
+  font-family: 'Skeina', sans-serif;
+  text-align: center;
 }
 
-.bg {
-  background-image: url(../../../assets/img/logo.png);
-  background-position: center center;
-  background-repeat: no-repeat;
-  border-radius: 0 16px 16px 0;
+.logo {
+  width: 4vh;
+  height: 4vh;
+  top: 0 auto;
+  left: 0 auto;
+}
+
+.container {
+  width: 85%;
+  height: auto;
+}
+
+.body {
+  background-image: url("https://images.pexels.com/photos/5938595/pexels-photo-5938595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  image-resolution: auto;
+  background-size: cover;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contenedor {
+  border-radius: 5px;
+  width: 44%;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.879);
+  text-align: center;
+  font-family: 'Skeina', sans-serif;
+}
+
+input,
+.genero {
+  background-color: transparent;
+  border-radius: 3px;
+  border: 1.55px solid black;
+  padding: 10px;
+  margin: 10px;
+  width: 245px;
+  font-family: 'Skeina', sans-serif;
+}
+
+.genero {
+  color: gray;
+  width: 242px;
+  font-family: 'Skeina', sans-serif;
+}
+
+
+.titulo {
+  margin-bottom: 20px;
+  font-family: 'Skeina', sans-serif;
+}
+
+.crear {
+  background-color: #B544EC;
+  border: 3px solid #B544EC;
+  color: white;
+  padding: 10px;
+  margin: 20px;
+  min-width: 150px;
+  border-radius: 3px;
+  font-family: 'Roboto', sans-serif;
+}
+
+button:hover {
+  background-color: #B544EC;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
 }

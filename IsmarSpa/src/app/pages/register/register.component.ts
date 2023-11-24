@@ -36,13 +36,15 @@ export class RegisterComponent {
       date: this.myForm.get('date')?.value,
       gender: this.myForm.get('gender')?.value
     };
+    console.log(datosUsuario);
+    
     // Llamamos al servicio AuthService para registrar al usuario
     this.AuthService.registrarUsuario(datosUsuario).subscribe(
       (respuesta) => {
         // Manejar la respuesta del servidor aquí
         console.log('Respuesta del servidor:', respuesta);
       },
-    )
+    );
   }
 
   submitForm() {
@@ -51,6 +53,7 @@ export class RegisterComponent {
       const datosUsuario = this.myForm.value;
 
       // Llamar al servicio para registrar al usuario
+      
       this.AuthService.registrarUsuario(datosUsuario).subscribe(
         (respuesta) => {
           Swal.fire({
@@ -68,7 +71,7 @@ export class RegisterComponent {
           Swal.fire({
             icon: 'error',
             title: '¡Error!',
-            text: '¡El correo electronico o el documento ya existen!'
+            text: '¡El correo electronico o el documento ya existen!' 
           })
         }
       );

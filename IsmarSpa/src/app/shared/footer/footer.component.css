@@ -1,6 +1,28 @@
-.footer{
-  height: 20vh;
-  background: #451c5c;
-  position: absolute;
-  width: 100%;
+/*CSS FOOTER*/
+#footer_brand{
+	margin: auto;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+#footer_brand a{
+	text-decoration: none;
+	color: #8311BB;
+	font-size: 40px;
+	font-family: 'Skeina', sans-serif;
+}
+
+#footer_brand img{
+	width: 40px;
+	height: auto;
+}
+
+#footer_items li a{
+    font-family: 'Skeina', sans-serif;
+    font-size: 25px;
+    color: #493F4E;
+}
+
+#footer_items li a:hover{
+    color: #8311BB;
 }

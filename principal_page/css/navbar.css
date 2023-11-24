@@ -1,0 +1,44 @@
+/*Brand*/
+#brand{
+	margin: auto;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+#brand a{
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 40px;
+	font-family: 'Skeina', sans-serif;
+}
+
+#brand img{
+	width: 40px;
+	height: auto;
+}
+
+.nav-link{
+	color: white;
+	font-family:'Roboto', sans-serif;
+	font-size: 3vh large;
+}
+
+.nav-link:hover{
+	transition: 0.5s;
+	border-bottom: 2px solid #8311BB;
+	background-color:transparent;
+	color: #8311BB;
+}
+
+#sesion button{
+	background-color: #B544EC;
+	font-weight: bold;
+	font-family:'Roboto', sans-serif;
+	color: white;
+	font-size: 3vh large;
+}
+
+#sesion button:hover{
+	transition-duration: 0.5s;
+	background-color:#8311BB;
+}
