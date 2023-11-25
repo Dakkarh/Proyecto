@@ -11,8 +11,9 @@ import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { NavbarComponent } from './navbar/navbar.component';
-import { CardsComponent } from './cards/cards.component';
 import { InfoComponent } from './info/info.component';
+import { CardsServiciosComponent } from './cardsServicios/cards-servicios.component';
+import { CardsProductosComponent } from './cardsProductos/cards-productos.component';
 
 
 @NgModule({
@@ -22,8 +23,9 @@ import { InfoComponent } from './info/info.component';
     HeaderComponent,
     TableComponent,
     NavbarComponent,
-    CardsComponent,
-    InfoComponent
+    InfoComponent,
+    CardsServiciosComponent,
+    CardsProductosComponent
   ],
   imports: [
     CommonModule,
@@ -40,7 +42,8 @@ import { InfoComponent } from './info/info.component';
     SidebarComponent,
     HeaderComponent,
     TableComponent,
-    CardsComponent,
+    CardsServiciosComponent,
+    CardsProductosComponent,
     InfoComponent,
     NavbarComponent
   ],

@@ -1,11 +1,7 @@
 /*CSS PRINCIPAL*/
-body {
-	background:white;
-	overflow: auto;
-}
 
 #principal_page{
-	background-image:url("/IsmarSpa/src/assets/img/background.webp");
+	background-image:url("../../../assets/img/background.webp");
 	background-color: rgba(152, 66, 211, 0.63);
 	background-size: cover;
 	width: auto;
@@ -58,7 +54,7 @@ body {
 .article_img {
 	height: 60vh;
 	width: 60vh;
-	background-image: url("/IsmarSpa/src/assets/img/article_01.webp");
+	background-image: url("../../../assets/img/article_01.webp");
 	background-position: bottom;
 	align-self: center;
 }

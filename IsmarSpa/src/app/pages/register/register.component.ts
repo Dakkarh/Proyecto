@@ -18,13 +18,36 @@ export class RegisterComponent {
       name: ['', Validators.required],
       lastName: ['', Validators.required],
       document: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
+      email: ['', [Validators.required, Validators.pattern('')]],
+      password: ['', [Validators.required, Validators.minLength(8)]],
       address: ['', [Validators.required]],
       date: [''],
       gender: ['']
     });
   }
+
+  get nameNoValido() {
+    return this.myForm.get('name')?.invalid && this.myForm.get('name')?.touched;
+  }
+  get lastNameNoValido() {
+    return this.myForm.get('lastName')?.invalid && this.myForm.get('lastName')?.touched;
+  }
+  get documentNoValido() {
+    return this.myForm.get('document')?.invalid && this.myForm.get('document')?.touched;
+  }
+  get emailNoValido(){
+    return this.myForm.get('email')?.invalid && this.myForm.get('email')?.touched;
+  }
+  get passwordNoValido(){
+    return this.myForm.get('password')?.invalid && this.myForm.get('password')?.touched;
+  }
+  get addressNoValido(){
+    return this.myForm.get('address')?.invalid && this.myForm.get('address')?.touched;
+  }
+  get genderNoValido(){
+    return this.myForm.get('gender')?.invalid && this.myForm.get('gender')?.touched;
+  }
+
   registrarUsuario() {
     const datosUsuario = {
       name: this.myForm.get('name')?.value,
@@ -36,8 +59,7 @@ export class RegisterComponent {
       date: this.myForm.get('date')?.value,
       gender: this.myForm.get('gender')?.value
     };
-    console.log(datosUsuario);
-    
+
     // Llamamos al servicio AuthService para registrar al usuario
     this.AuthService.registrarUsuario(datosUsuario).subscribe(
       (respuesta) => {
@@ -53,7 +75,7 @@ export class RegisterComponent {
       const datosUsuario = this.myForm.value;
 
       // Llamar al servicio para registrar al usuario
-      
+
       this.AuthService.registrarUsuario(datosUsuario).subscribe(
         (respuesta) => {
           Swal.fire({
@@ -71,7 +93,7 @@ export class RegisterComponent {
           Swal.fire({
             icon: 'error',
             title: '¡Error!',
-            text: '¡El correo electronico o el documento ya existen!' 
+            text: '¡El correo electronico o el documento ya existen!'
           })
         }
       );
@@ -83,5 +105,4 @@ export class RegisterComponent {
       })
     }
   }
-
 }

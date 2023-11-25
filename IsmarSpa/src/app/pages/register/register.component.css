@@ -3,12 +3,6 @@
   padding: 0;
 }
 
-.menu {
-  display: inline-block;
-  top: 0;
-  left: 0;
-}
-
 .ismartitulo {
   color: white;
   position: absolute;
@@ -28,15 +22,11 @@
   left: 0 auto;
 }
 
-.container {
-  width: 85%;
-  height: auto;
-}
-
 .body {
   background-image: url("https://images.pexels.com/photos/5938595/pexels-photo-5938595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   image-resolution: auto;
   background-size: cover;
+  background-repeat: no-repeat;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -66,7 +56,7 @@ input,
 
 .genero {
   color: gray;
-  width: 242px;
+  width: 247px;
   font-family: 'Skeina', sans-serif;
 }
 
@@ -88,7 +78,7 @@ input,
 }
 
 button:hover {
-  background-color: #B544EC;
+  background-color: #9f3cd1;
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
 }

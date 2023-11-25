@@ -1,26 +1,61 @@
 <div class="body">
   <div class="contenedor">
     <h2 class="titulo">Completa los datos para crear tu cuenta</h2>
-    <form [formGroup]="myForm" (ngSubmit)="submitForm()">
-      <div>
-        <input type="text" name="name" formControlName="name" placeholder="Nombre completo" required>
-        <input type="text" name="lastName" formControlName="lastName" placeholder="Apellidos">
-        <input type="email" name="email" formControlName="email" placeholder="E-mail">
-        <input type="password" name="password" formControlName="password" placeholder="Contraseña">
-        <input type="text" name="document" formControlName="document" placeholder="Número de documento">
-        <input type="text" name="address" formControlName="address" placeholder="Dirección">
-        <input type="date" name="date" formControlName="date" placeholder="Fecha de nacimiento">
-        <select name="gender" name="gender" formControlName="gender" class="genero">
-          <option value="" disabled selected>Género</option>
-          <option value="1">Masculino</option>
-          <option value="2">Femenino</option>
-          <option value="3">Otro</option>
-        </select>
+    <form class="row" [formGroup]="myForm" (ngSubmit)="submitForm()">
+      <div class="col-6 ">
+        <div class="text-start">
+          <input class="form-control" type="text" name="name" formControlName="name" [class.is-invalid]="nameNoValido"
+            placeholder="Nombre completo" required>
+          <small *ngIf="nameNoValido" class="text-danger">Por favor, ingrese un nombre.</small>
+        </div>
+        <div class="text-start">
+          <input class="form-control" type="text" name="lastName" formControlName="lastName"
+            [class.is-invalid]="lastNameNoValido" placeholder="Apellidos">
+          <small *ngIf="lastNameNoValido" class="text-danger">Por favor, ingrese apellidos.</small>
+        </div>
+        <div class="text-start">
+          <input class="form-control" type="email" name="email" formControlName="email"
+            [class.is-invalid]="emailNoValido" placeholder="E-mail">
+          <small *ngIf="emailNoValido" class="text-danger">Por favor, ingrese un correo valido.</small>
+        </div>
+        <div class="text-start">
+          <input class="form-control" type="password" name="password" formControlName="password"
+            [class.is-invalid]="passwordNoValido" placeholder="Contraseña">
+          <small *ngIf="passwordNoValido" class="text-danger">Por favor, ingrese una contraseña valida la contraseña
+            debe ser minimo de 8 caracteres.</small>
+        </div>
       </div>
-      <button class="crear" type="submit">Crear Cuenta</button>
+      <div class="col-6">
+        <div class="">
+          <input class="form-control" type="text" name="document" formControlName="document"
+            [class.is-invalid]="documentNoValido" placeholder="Número de documento">
+          <small *ngIf="documentNoValido" class="text-danger">Por favor, ingrese un numero de documento.</small>
+        </div>
+        <div class="">
+          <input class="form-control" type="text" name="address" formControlName="address"
+            [class.is-invalid]="addressNoValido" placeholder="Dirección">
+          <small *ngIf="addressNoValido" class="text-danger">Por favor, ingrese una dirección de residencia.</small>
+        </div>
+        <div>
+          <input class="form-control" type="date" name="date" formControlName="date" placeholder="Fecha de nacimiento">
+        </div>
+        <div class="col-6">
+          <select class="form-select" name="gender" name="gender" formControlName="gender"
+            [class.is-invalid]="genderNoValido" class="genero">
+            <option value="" disabled selected>Género</option>
+            <option value="1">Masculino</option>
+            <option value="2">Femenino</option>
+            <option value="3">Otro</option>
+          </select>
+          <small *ngIf="genderNoValido" class="text-danger">Por favor, ingresa un nombre válido.</small>
+        </div>
+      </div>
+      <div class="">
+        <button class="crear" type="submit">Crear Cuenta</button>
+      </div>
     </form>
   </div>
 </div>
 <div class="menu">
-  <a class="ismartitulo" href="#"><img class="logo" src="../../../assets/img/logo_blanco.png" alt="">&nbsp; IsmarSpa</a>
+  <a class="ismartitulo m-5" href="#"><img class="logo" src="../../../assets/img/logo_blanco.png" alt=""> IsmarSpa</a>
 </div>
