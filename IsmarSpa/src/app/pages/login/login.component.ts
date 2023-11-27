@@ -13,9 +13,13 @@ export class LoginComponent {
 
   myForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthService, private router: Router) {
+  constructor(
+    private formBuilder: FormBuilder, 
+    private authService: AuthService, 
+    private router: Router,
+    ) {
     this.myForm = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required]],
       password: ['', Validators.required],
     });
   }
@@ -38,8 +42,9 @@ export class LoginComponent {
     if (this.myForm.valid) {
       const datosInicioSesion = this.myForm.value;
       this.authService.iniciarSesion(datosInicioSesion).subscribe(
-        (respuesta) => {
-          console.log('Respuesta del servidor:', respuesta);
+        (respuesta:any) => {
+          const Token: string = respuesta.token;
+          localStorage.setItem('token',Token);
           // Aquí puedes manejar la respuesta del servidor, por ejemplo, redirigir al usuario o mostrar un mensaje de éxito.
           Swal.fire({
             icon: 'success',

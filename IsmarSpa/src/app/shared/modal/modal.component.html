@@ -1,0 +1,76 @@
+<!-- Button modal -->
+<div class="m-5">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Registrar usuarios
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Registrar usuario</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="row" [formGroup]="myForm" (ngSubmit)="submitForm()">
+            <div class="col-6 ">
+              <div class="text-start mt-3">
+                <input class="form-control" type="text" name="name" formControlName="name"
+                  [class.is-invalid]="nameNoValido" placeholder="Nombre completo" required>
+                <small *ngIf="nameNoValido" class="text-danger">Por favor, ingrese un nombre.</small>
+              </div>
+              <div class="text-start mt-3">
+                <input class="form-control" type="text" name="lastName" formControlName="lastName"
+                  [class.is-invalid]="lastNameNoValido" placeholder="Apellidos">
+                <small *ngIf="lastNameNoValido" class="text-danger">Por favor, ingrese apellidos.</small>
+              </div>
+              <div class="text-start mt-3">
+                <input class="form-control" type="email" name="email" formControlName="email"
+                  [class.is-invalid]="emailNoValido" placeholder="E-mail">
+                <small *ngIf="emailNoValido" class="text-danger">Por favor, ingrese un correo valido.</small>
+              </div>
+              <div class="text-start mt-3">
+                <input class="form-control" type="password" name="password" formControlName="password"
+                  [class.is-invalid]="passwordNoValido" placeholder="Contraseña">
+                <small *ngIf="passwordNoValido" class="text-danger">Por favor, ingrese una contraseña valida la
+                  contraseña
+                  debe ser minimo de 8 caracteres.</small>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="mt-3">
+                <input class="form-control" type="text" name="document" formControlName="document"
+                  [class.is-invalid]="documentNoValido" placeholder="Número de documento">
+                <small *ngIf="documentNoValido" class="text-danger">Por favor, ingrese un numero de documento.</small>
+              </div>
+              <div class="mt-3">
+                <input class="form-control" type="text" name="address" formControlName="address"
+                  [class.is-invalid]="addressNoValido" placeholder="Dirección">
+                <small *ngIf="addressNoValido" class="text-danger">Por favor, ingrese una dirección de
+                  residencia.</small>
+              </div>
+              <div class="mt-3">
+                <input class="form-control" type="date" name="date" formControlName="date"
+                  placeholder="Fecha de nacimiento">
+              </div>
+              <div class="col-6 mt-3">
+                <select name="gender" name="gender" formControlName="gender" [class.is-invalid]="genderNoValido"
+                  class="genero form-select ">
+                  <option value="" disabled selected>Género</option>
+                  <option value="M">Masculino</option>
+                  <option value="F">Femenino</option>
+                  <option value="I">Indefinido</option>
+                </select>
+                <small *ngIf="genderNoValido" class="text-danger">Por favor, ingresa un nombre válido.</small>
+              </div>
+            </div>
+            <div class="modal-footer mt-4">
+              <button type="submit" class="btn btn-primary">Registrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

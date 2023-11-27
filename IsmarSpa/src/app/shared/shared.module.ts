@@ -1,19 +1,21 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
 import { Router, RouterModule } from '@angular/router';
 import { TableComponent } from './table/table.component';
-import {MatPaginatorModule} from '@angular/material/paginator';
-import {MatSortModule} from '@angular/material/sort';
-import {MatTableModule} from '@angular/material/table';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { NavbarComponent } from './navbar/navbar.component';
 import { InfoComponent } from './info/info.component';
 import { CardsServiciosComponent } from './cardsServicios/cards-servicios.component';
 import { CardsProductosComponent } from './cardsProductos/cards-productos.component';
+import { ModalComponent } from './modal/modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,7 +27,8 @@ import { CardsProductosComponent } from './cardsProductos/cards-productos.compon
     NavbarComponent,
     InfoComponent,
     CardsServiciosComponent,
-    CardsProductosComponent
+    CardsProductosComponent,
+    ModalComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +37,8 @@ import { CardsProductosComponent } from './cardsProductos/cards-productos.compon
     MatSortModule,
     MatTableModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    ReactiveFormsModule
   ],
 
   exports: [
@@ -45,10 +49,11 @@ import { CardsProductosComponent } from './cardsProductos/cards-productos.compon
     CardsServiciosComponent,
     CardsProductosComponent,
     InfoComponent,
-    NavbarComponent
+    NavbarComponent,
+    ModalComponent
   ],
 
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 
 })
 export class SharedModule { }

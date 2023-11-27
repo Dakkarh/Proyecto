@@ -1,8 +1,9 @@
-import { AfterViewInit, Component, Input, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { AuthService } from '../../service/auth.service';
+import { BdService } from 'src/app/service/bd.service';
 declare var $: any;
 
 @Component({
@@ -16,25 +17,25 @@ export class TableComponent implements OnInit {
   @Input() columns: { column: string, title: string }[] = [];
   data: any[] = [];
   dataSource = new MatTableDataSource();
+  @Output() update = new EventEmitter();
 
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private AuthService: AuthService) {
-    this.dataSource.data = [{
-      name:'Emerson',
-      document:'1017250330',
-      lastName:'Barranco'
-    },
-    {
-      name:'Emerson',
-      document:'1017250330',
-      lastName:'Barranco'
-    }]
+  constructor(private bd: BdService) {
+
   }
 
   ngOnInit(): void {
+
+    if (this.table === 'users') {
+      this.bd.getUsers().subscribe(user => {
+        this.dataSource.data = user;
+      });
+    } else if (this.table === 'products') {
+
+    }
 
   }
 
@@ -54,7 +55,14 @@ export class TableComponent implements OnInit {
   }
 
   getColumnsValues(): string[] {
-    return this.columns.map(column => column.column);
+    return this.columns.map(column => column.column).concat('action');
+  }
+
+
+  updateData(id: string) {
+    if (id!='') {
+      this.update.emit(id);
+    }
   }
 
 }

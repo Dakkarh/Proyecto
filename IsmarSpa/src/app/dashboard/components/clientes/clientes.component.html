@@ -1,1 +1,23 @@
-<app-table [columns]="columns" [table]="table"></app-table>
+<app-modal></app-modal>
+
+<app-table [columns]="columns" [table]="table" (update)="getUpdateData($event)"></app-table>
+
+<div class="modal fade" id="ModalUpdateusers" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form [formGroup]="form" (ngSubmit)="updateDataBD()">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Actualizar información del usuario </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <label>Actualizar dirección</label>
+          <input class="form-control " type="text" formControlName="address">
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Actualizar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
