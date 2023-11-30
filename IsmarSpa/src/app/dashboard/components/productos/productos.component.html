@@ -1,0 +1,42 @@
+<div class="m-5">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Registrar producto
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <form [formGroup]="formProducts" (ngSubmit)="submitForm()">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Registrar producto </h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <label>Nombre</label>
+              <input class="form-control " type="text" name="name" formControlName="name" required>
+            </div>
+            <div class="modal-body">
+              <label>Categoria</label>
+              <input class="form-control " type="text" name="category" formControlName="category" required>
+            </div>
+            <div class="modal-body">
+              <label>Precio</label>
+              <input class="form-control " type="text" name="price" formControlName="price" required>
+            </div>
+            <div class="modal-body">
+              <label>Direccion de la imagen</label>
+              <input class="form-control " type="text" name="img_url" formControlName="img_url" required>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary">Registrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-table [columns]="columns" [table]="table"></app-table>

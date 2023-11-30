@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export class AuthService {
 
   private apiUrl = 'http://localhost:3000/api/auth';
+  private productsUrl = 'http://localhost:3000/api/products';
 
   constructor(private Http: HttpClient) { }
 
@@ -21,5 +22,9 @@ export class AuthService {
 
   iniciarSesion(datosInicioSesion: any) {
     return this.Http.post(`${this.apiUrl}/signin`, datosInicioSesion);
+  }
+
+  registrarProducto(datosProducto: any) {
+    return this.Http.post(`${this.productsUrl}/`, datosProducto);
   }
 }

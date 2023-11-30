@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewChild, AfterViewInit } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -37,6 +37,14 @@ export class TableComponent implements OnInit {
 
     }
 
+    if (this.table === 'products') {
+      this.bd.getProducts().subscribe(product => {
+        this.dataSource.data = product;
+      });
+    } else if (this.table === 'users') {
+
+    }
+
   }
 
   ngAfterViewInit() {
@@ -60,7 +68,7 @@ export class TableComponent implements OnInit {
 
 
   updateData(id: string) {
-    if (id!='') {
+    if (id != '') {
       this.update.emit(id);
     }
   }

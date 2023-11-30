@@ -11,7 +11,17 @@ export class SidebarComponent {
   constructor(private router: Router){
 
   }
+
   clientes(){
     this.router.navigate(['/dashboard/clientes']);
   }
+
+  productos(){
+    this.router.navigate(['/dashboard/productos']);
+  }
+
+  servicios(){
+    this.router.navigate(['/dashboard/servicios']);
+  }
+
 }

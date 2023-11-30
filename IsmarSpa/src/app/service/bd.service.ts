@@ -7,8 +7,10 @@ import { Observable } from 'rxjs';
 })
 
 export class BdService {
+  [x: string]: any;
 
   private apiUrl = 'http://localhost:3000/api/users';
+  private apiUrlProducts = 'http://localhost:3000/api/products';
 
   constructor(private Http: HttpClient) { }
 
@@ -51,5 +53,29 @@ export class BdService {
     return this.Http.put(url, body, { headers });
   }
 
+  //----------------------------- listar productos ----------------------------------
 
+  getProducts(): Observable<any> {
+    const token = localStorage.getItem('token');
+
+    const headers = new HttpHeaders({
+      'x-access-token': token as string,
+      "Content-type": "application/json"
+    });
+
+    return this.Http.get(this.apiUrlProducts, { headers });
+  }
+
+  getProductsByID(id: string) {
+    const token = localStorage.getItem('token');
+
+    const headers = new HttpHeaders({
+      'x-access-token': token as string,
+      "Content-type": "application/json"
+    });
+
+    const productsUrl = `${this.apiUrlProducts}/${id}`;
+
+    return this.Http.get(productsUrl, { headers });
+  }
 }
