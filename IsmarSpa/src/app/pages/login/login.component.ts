@@ -14,8 +14,8 @@ export class LoginComponent {
   myForm: FormGroup;
 
   constructor(
-    private formBuilder: FormBuilder, 
-    private authService: AuthService, 
+    private formBuilder: FormBuilder,
+    private authService: AuthService,
     private router: Router,
     ) {
     this.myForm = this.formBuilder.group({
@@ -52,7 +52,7 @@ export class LoginComponent {
             text: 'Se ha iniciado sesión correctamente',
           })
           // Redirige al usuario a la página principal o a la ubicación deseada
-          this.router.navigate(['/dashboard']);
+          this.router.navigate(['/inicio']);
 
         },
         (error) => {

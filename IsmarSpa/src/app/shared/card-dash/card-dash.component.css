@@ -1,0 +1,9 @@
+.card-title{
+  font-family:'Skeina', sans-serif ;
+  font-size: 30px;
+}
+
+.card:hover {
+  box-shadow: 0 10px 35px 0px rgba(0, 0, 0, 0.1);
+}
+

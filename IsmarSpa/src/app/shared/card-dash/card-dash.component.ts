@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-sidebar',
-  templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.css']
+  selector: 'app-card-dash',
+  templateUrl: './card-dash.component.html',
+  styleUrls: ['./card-dash.component.css']
 })
-export class SidebarComponent {
+export class CardDashComponent {
 
   constructor(private router: Router){
 
@@ -27,5 +27,5 @@ export class SidebarComponent {
   servicios(){
     this.router.navigate(['/dashboard/servicios']);
   }
-
 }
+

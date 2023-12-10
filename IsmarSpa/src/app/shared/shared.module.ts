@@ -16,6 +16,7 @@ import { CardsServiciosComponent } from './cardsServicios/cards-servicios.compon
 import { CardsProductosComponent } from './cardsProductos/cards-productos.component';
 import { ModalComponent } from './modal/modal.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CardDashComponent } from './card-dash/card-dash.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     InfoComponent,
     CardsServiciosComponent,
     CardsProductosComponent,
-    ModalComponent
+    ModalComponent,
+    CardDashComponent
   ],
   imports: [
     CommonModule,
@@ -48,6 +50,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     TableComponent,
     CardsServiciosComponent,
     CardsProductosComponent,
+    CardDashComponent,
     InfoComponent,
     NavbarComponent,
     ModalComponent

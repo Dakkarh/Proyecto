@@ -16,7 +16,7 @@ export const signUp = async (req, res) => {
 
     const userRole = [defaultRole.name];
 
-    const regex = /^[a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    const regex = /^[a-zA-Z0-9.!#$%&'+-/=?^_`{|}~]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
     if (!regex.test(email)) {
       return res.status(403).json({ message: "It's Not an Email!" })
     }
@@ -95,3 +95,19 @@ export const signIn = async (req, res) => {
 
   res.json({ token });
 };
+
+
+export const logout = async (req, res) => {
+  try {
+    const token = req.headers['x-access-token'];
+
+    const invalidTokens = req.app.get('invalidTokens') || [];
+    invalidTokens.push(token);
+    req.app.set('invalidTokens', invalidTokens);
+
+    res.status(200).json({ message: 'Logout successful '});
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Internal Server Error' });
+  }
+}

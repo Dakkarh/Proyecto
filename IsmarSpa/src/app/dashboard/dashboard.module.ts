@@ -15,7 +15,7 @@ import { ServiciosComponent } from './components/servicios/servicios.component';
     PrincipalComponent,
     ClientesComponent,
     ProductosComponent,
-    ServiciosComponent
+    ServiciosComponent,
   ],
   imports: [
     CommonModule,

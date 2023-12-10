@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
 import { AuthService } from '../../../service/auth.service';
+import { ResourceLoader } from '@angular/compiler';
 
 @Component({
   selector: 'app-productos',
@@ -73,7 +74,13 @@ export class ProductosComponent {
       this.AuthService.registrarProducto(datosProducto).subscribe(
         (respuesta) => {
           // Manejar la respuesta del servidor aquí
+          Swal.fire({
+            icon: 'success',
+            title: '¡Exito!',
+            text: '¡Producto registrado!',
+          })
           console.log('Respuesta del servidor:', respuesta);
+          location.reload();
         },
         (error) => {
           // Manejar errores aquí

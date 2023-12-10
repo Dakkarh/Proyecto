@@ -86,6 +86,7 @@ export class ModalComponent {
           })
           // Manejar la respuesta del servidor aquí
           console.log('Respuesta del servidor:', respuesta);
+          location.reload();
         },
         (error) => {
           // Manejar errores aquí
