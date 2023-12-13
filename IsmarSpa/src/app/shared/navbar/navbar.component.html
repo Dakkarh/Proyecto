@@ -28,14 +28,89 @@
           <a class="nav-link" href="">CONTACTO</a>
         </li>
       </ul>
-      <div id="sesion" class=" m-lg-3 m-sm-0 mb-sm-2 ">
+      <div *ngIf="login === 'false' || login===null" id="sesion" class=" m-lg-3 m-sm-0 mb-sm-2 ">
         <button type="button" class="btn" [routerLink]="'/auth/login'">INICIAR SESION</button>
       </div>
-      <div id="sesion" class=" h-auto ">
-        <button type="button" class="btn" [routerLink]="'/auth/register'">REGISTRO</button>
+      <div *ngIf="login === 'true'" id="update" class=" m-lg-3 m-sm-0 mb-sm-2">
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">Actualizar
+          Cita</button>
       </div>
 
-    </div>
+      <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Actualizar Cita</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
 
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+
+                <div class="fecha">
+                  <div>
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" name="fecha" class="" required>
+                  </div>
+                  <div>
+                    <label for="hora">Esteticista:</label>
+                    <select id="hora" name="hora" required>
+                      <option value="" selected>Seleccionar Esteticista</option>
+                      <option value="1"></option>
+                      <option value="2"></option>
+                      <option value="3"></option>
+                      <!-- Agrega más opciones según sea necesario -->
+                    </select>
+                  </div>
+                </div>
+
+                <label for="hora">Hora:</label>
+                <select id="hora" name="hora" class="time-input" required>
+                  <option value="" selected>Seleccionar</option>
+                  <option value="1">09:00 AM</option>
+                  <option value="2">12:00 PM</option>
+                  <option value="3">03:00 PM</option>
+                  <!-- Agrega más opciones según sea necesario -->
+                </select>
+
+                <label for="service">Servicio:</label>
+                <select id="service" name="service" class="time-input" required>
+                  <option value="" selected>Seleccionar</option>
+                  <option value="1">Masajes</option>
+                  <option value="2">Tratamientos de belleza</option>
+                  <option value="3">Tratamientos faciales</option>
+                  <!-- Agrega más opciones según sea necesario -->
+                </select>
+
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary">Actualizar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="login === 'true'" class="dropdown">
+        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          <img
+            src="https://secure.gravatar.com/avatar/23c5e746a37525acf9d753281b514a3e?s=50&d=https%3A%2F%2Fwpastra.com%2Fwp-content%2Fuploads%2F2019%2F08%2Fastra-default-gravatar.png&r=g"
+            alt="" width="32" height="32" class="rounded-circle me-2">
+          <strong>Perfil</strong>
+        </a> 
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+          <!-- <li><a class="dropdown-item" href="#">New project...</a></li>
+          <li><a class="dropdown-item" href="#">Settings</a></li>
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li> -->
+          <li><a class="dropdown-item" href="#" (click)="logouth()">Cerrar Sesión</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </nav>

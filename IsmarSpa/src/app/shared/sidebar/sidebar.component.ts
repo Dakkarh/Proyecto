@@ -28,4 +28,8 @@ export class SidebarComponent {
     this.router.navigate(['/dashboard/servicios']);
   }
 
+  citas(){
+    this.router.navigate(['/dashboard/citas']);
+  }
+
 }

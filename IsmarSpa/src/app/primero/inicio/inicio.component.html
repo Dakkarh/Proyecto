@@ -1,35 +1,115 @@
-
 <!--CONTENEDOR IMAGEN PRINCIPAL principal-->
 <div id="principal_page">
   <app-navbar></app-navbar>
   <!--Mensaje del medio-->
   <div class="position-absolute top-50 start-50 translate-middle text-center" id="principal_title">
-      <p class="mb-5">Tu Destino para la</p>
-      <p> Belleza y el Bienestar</p>
-      <button type="button" class="btn mt-5 ">RESERVAR CITA</button>
+    <p class="mb-5">Tu Destino para la</p>
+    <p> Belleza y el Bienestar</p>
+    <button type="button" class="btn mt-5 " data-bs-toggle="modal" data-bs-target="#exampleModal">RESERVAR CITA</button>
+  </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Reservar Cita</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="formCitas" (ngSubmit)="submitForm()">
+            <div class="name-inputs">
+              <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="name" name="name" formControlName="name" required>
+              </div>
+              <div>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="lastName" name="lastName" formControlName="lastName" required>
+              </div>
+            </div>
+
+            <label for="document">Documento:</label>
+            <input type="text" id="email" name="email" formControlName="email" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" formControlName="email" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <div class="fecha">
+              <div>
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" class="" formControlName="date_hour" required>
+              </div>
+              <div>
+                <label for="hora">Esteticista:</label>
+                <select id="hora" name="hora" formControlName="beautician_id" required>
+                  <option value="" selected>Seleccionar Esteticista</option>
+                  <option value="1"></option>
+                  <option value="2"></option>
+                  <option value="3"></option>
+                  <!-- Agrega más opciones según sea necesario -->
+                </select>
+              </div>
+            </div>
+
+            <label for="hora">Hora:</label>
+            <select id="hora" name="hora" class="time-input" formControlName="date_hour" required>
+              <option value="" selected>Seleccionar</option>
+              <option value="1">09:00 AM</option>
+              <option value="2">12:00 PM</option>
+              <option value="3">03:00 PM</option>
+              <!-- Agrega más opciones según sea necesario -->
+            </select>
+
+            <label for="service">Servicio:</label>
+            <select id="service" name="service" class="time-input" formControlName="service_id" required>
+              <option value="" selected>Seleccionar</option>
+              <option value="1">Masajes</option>
+              <option value="2">Tratamientos de belleza</option>
+              <option value="3">Tratamientos faciales</option>
+              <!-- Agrega más opciones según sea necesario -->
+            </select>
+
+
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary">Registrar</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
   </div>
 </div>
 
 <!--Sobre nosostros-->
 <div class="container my-3 py-3">
   <div class="row">
-      <h1 class="subtitle text-start align-top my-3">Sobre Nosotros</h1>
-      <div class="article_text col-lg-6 col-sm-12 text-justify align-self-start">
-          <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero delectus itaque excepturi possimus.
-              Voluptates ut cumque quam ipsum odit laudantium vel et iure dolorum, similique hic tenetur dolore at
-              veritatis!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nam, inventore quo minus officia
-              eius, laudantium ipsa ipsam quas odio vero repellat velit. Quas dolor, dicta qui aliquam earum
-              iusto!
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus corrupti eos commodi aut quis
-              iure sequi quaerat ducimus. Veritatis, nemo repellat qui aut ducimus mollitia magnam expedita enim
-              fugit placeat.
-          </p>
-      </div>
-      <div class="article_img col-lg-6 col-sm-12">
-          <!--EL DIV ES LA IMAGEN-->
-      </div>
+    <h1 class="subtitle text-start align-top my-3">Sobre Nosotros</h1>
+    <div class="article_text col-lg-6 col-sm-12 text-justify align-self-start">
+      <h1>Bienvenido a IsmarSpa</h1>
+      <p>En IsmarSpa, nos complace ser tu destino de serenidad y bienestar. Desde nuestra apertura, nos hemos dedicado a
+        crear un santuario donde puedas encontrar paz y revitalización para tu cuerpo y mente.</p>
+      <br>
+      <h1>Nuestra Filosofía</h1>
+      <p>En IsmarSpa, creemos en la conexión intrínseca entre el bienestar físico y mental. Nuestra filosofía se centra
+        en el equilibrio y la armonía, reconociendo que la verdadera belleza proviene de cuidar de ti mismo de adentro
+        hacia afuera.</p>
+      <br>
+      <h1>Te Invitamos a Disfrutar</h1>
+      <p>Ya sea que estés buscando un masaje relajante, un tratamiento facial revitalizante o simplemente un momento de
+        tranquilidad, IsmarSpa está aquí para satisfacer tus necesidades. Te invitamos a embarcarte en un viaje hacia la
+        total renovación con nosotros.</p>
+      <br>
+      <p>En IsmarSpa, no solo ofrecemos tratamientos; ofrecemos experiencias. Únete a nosotros y descubre el arte de
+        cuidar de ti mismo.</p>
+
+      <h2>¡Esperamos con entusiasmo darte la bienvenida pronto a IsmarSpa!</h2>
+    </div>
+    <div class="article_img col-lg-6 col-sm-12">
+      <!--EL DIV ES LA IMAGEN-->
+    </div>
   </div>
 </div>
 <app-cards-servicios></app-cards-servicios>

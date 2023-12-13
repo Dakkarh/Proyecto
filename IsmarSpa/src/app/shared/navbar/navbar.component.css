@@ -1,45 +1,121 @@
 /*CSS NAVBAR*/
 /*Brand*/
-#brand{
-	margin: auto;
-	height: 100%;
-	display: flex;
-	align-items: center;
-}
-#brand a{
-	text-decoration: none;
-	color: #ffffff;
-	font-size: 40px;
-	font-family: 'Skeina', sans-serif;
+#brand {
+  margin: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
-#brand img{
-	width: 40px;
-	height: auto;
+#brand a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 40px;
+  font-family: 'Skeina', sans-serif;
 }
 
-.nav-link{
-	color: white;
-	font-family:'Roboto', sans-serif;
-	font-size: 3vh large;
+#brand img {
+  width: 40px;
+  height: auto;
 }
 
-.nav-link:hover{
-	transition: 0.5s;
-	border-bottom: 2px solid #8311BB;
-	background-color:transparent;
-	color: #8311BB;
+.nav-link {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3vh large;
 }
 
-#sesion button{
-	background-color: #B544EC;
-	font-weight: bold;
-	font-family:'Roboto', sans-serif;
-	color: white;
-	font-size: 3vh large;
+.nav-link:hover {
+  transition: 0.5s;
+  border-bottom: 2px solid #8311BB;
+  background-color: transparent;
+  color: #8311BB;
 }
 
-#sesion button:hover{
-	transition-duration: 0.5s;
-	background-color:#8311BB;
+#sesion button {
+  background-color: #B544EC;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 3vh large;
 }
+
+
+#sesion button:hover {
+  transition-duration: 0.5s;
+  background-color: #8311BB;
+}
+
+.dropdown{
+  margin-right: 40px !important;
+}
+
+#update button{
+  background-color: #B544EC;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 3vh large;
+}
+
+#update button:hover {
+  transition-duration: 0.5s;
+  background-color: #8311BB;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.modal-body {
+  display: flex;
+  justify-content: center;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid #d898f8;
+}
+
+.name-inputs {
+  display: flex;
+  gap: 8px;
+}
+
+.date-input,
+.time-input {
+  width: calc(40% - 4px);
+  display: inline-block;
+}
+
+.calendar input {
+  cursor: pointer;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.service-checkbox {
+  flex: 0 0 calc(33.33% - 20px);
+  display: flex;
+  align-items: center;
+}
+
+.service{
+  margin-left: 17px;
+}
+
+.fecha{
+  display: flex;
+  gap: 30px;
+}
+

@@ -22,6 +22,7 @@ export class LoginComponent {
       email: ['', [Validators.required]],
       password: ['', Validators.required],
     });
+
   }
 
   iniciarSesion() {
@@ -51,6 +52,9 @@ export class LoginComponent {
             title: '¡Inicio de sesión exitoso!',
             text: 'Se ha iniciado sesión correctamente',
           })
+
+          this.authService.login();
+
           // Redirige al usuario a la página principal o a la ubicación deseada
           this.router.navigate(['/inicio']);
 

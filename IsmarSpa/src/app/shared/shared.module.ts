@@ -30,7 +30,7 @@ import { CardDashComponent } from './card-dash/card-dash.component';
     CardsServiciosComponent,
     CardsProductosComponent,
     ModalComponent,
-    CardDashComponent
+    CardDashComponent,
   ],
   imports: [
     CommonModule,

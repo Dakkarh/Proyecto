@@ -1,2 +1,48 @@
+<div class="m-5">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Registrar producto
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <form [formGroup]="formService" (ngSubmit)="submitForm()">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Registrar Servicio</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <label>Nombre</label>
+              <input class="form-control " type="text" name="name" formControlName="name" required>
+            </div>
+            <div class="modal-body">
+              <label>Categoria</label>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Seleccionar Categoria</option>
+                <option value="1">Masajes</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div class="modal-body">
+              <label>Precio del servicio</label>
+              <input class="form-control " type="text" name="price" formControlName="price" required>
+            </div>
+            <div class="modal-body">
+              <label>Descipción del servicio</label>
+              <textarea class="form-control" name="description" id="exampleFormControlTextarea1"
+                formControlName="description" rows="3" required></textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary">Registrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <app-table [columns]="columns" [table]="table"></app-table>

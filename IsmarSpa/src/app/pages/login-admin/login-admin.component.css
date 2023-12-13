@@ -13,6 +13,17 @@
   margin-bottom: 0px;
 } */
 
+.body {
+  background-image: url("https://www.zarla.com/images/zarla-spa-logos-6010x4012-20220113.jpeg?crop=2:1,smart&width=1200&dpr=2");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  image-resolution: auto;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  min-height: 100vh;
+}
+
 .titulo{
   font-family: 'Skeina', sans-serif;
   font-size: 40px;

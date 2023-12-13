@@ -34,15 +34,13 @@ export class TableComponent implements OnInit {
         this.dataSource.data = user;
       });
     } else if (this.table === 'products') {
-
-    }
-
-    if (this.table === 'products') {
       this.bd.getProducts().subscribe(product => {
         this.dataSource.data = product;
       });
-    } else if (this.table === 'users') {
-
+    } else if (this.table === 'service') {
+      this.bd.getService().subscribe(services => {
+        this.dataSource.data = services;
+      })
     }
 
   }

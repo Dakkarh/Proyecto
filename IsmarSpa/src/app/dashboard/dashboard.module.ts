@@ -7,6 +7,7 @@ import { ClientesComponent } from './components/clientes/clientes.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductosComponent } from './components/productos/productos.component';
 import { ServiciosComponent } from './components/servicios/servicios.component';
+import { CitasComponent } from './components/citas/citas.component';
 
 
 
@@ -16,6 +17,7 @@ import { ServiciosComponent } from './components/servicios/servicios.component';
     ClientesComponent,
     ProductosComponent,
     ServiciosComponent,
+    CitasComponent,
   ],
   imports: [
     CommonModule,

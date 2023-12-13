@@ -34,7 +34,7 @@ export const createUser = async (req, res) => {
 
     if (lastName.length<3) {
       console.log("error 2");
-      return res.status(403).json({ message:"lastnName so short or empty field!  min length 2" })
+      return res.status(403).json({ message:"lastName so short or empty field!  min length 2" })
     }
 
     if (document.length<10) {

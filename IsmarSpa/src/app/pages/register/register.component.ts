@@ -81,11 +81,11 @@ export class RegisterComponent {
           Swal.fire({
             icon: 'success',
             title: '¡Registro exitoso!',
-            text: 'Se a registrado correctamente',
+            text: 'Se ha registrado correctamente',
           })
           // Manejar la respuesta del servidor aquí
           console.log('Respuesta del servidor:', respuesta);
-          this.router.navigate(['/dashboard']);
+          this.router.navigate(['/auth/login']);
         },
         (error) => {
           // Manejar errores aquí
@@ -93,7 +93,7 @@ export class RegisterComponent {
           Swal.fire({
             icon: 'error',
             title: '¡Error!',
-            text: '¡El correo electronico o el documento ya existen!'
+            text: '¡Error al registrarse. Intentelo de nuevo!'
           })
         }
       );

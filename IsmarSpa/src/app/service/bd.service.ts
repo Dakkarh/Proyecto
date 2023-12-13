@@ -11,6 +11,7 @@ export class BdService {
 
   private apiUrl = 'http://localhost:3000/api/users';
   private apiUrlProducts = 'http://localhost:3000/api/products';
+  private apiUrlServices = 'http://localhost:3000/api/service';
 
   constructor(private Http: HttpClient) { }
 
@@ -77,5 +78,35 @@ export class BdService {
     const productsUrl = `${this.apiUrlProducts}/${id}`;
 
     return this.Http.get(productsUrl, { headers });
+
+  }
+
+  //----------------------------- listar Servicios ----------------------------------
+
+  getService(): Observable<any> {
+    const token = localStorage.getItem('token');
+
+    const headers = new HttpHeaders({
+      'x-access-token': token as string,
+      'Content-type': 'application/json'
+    });
+
+    return this.Http.get(this.apiUrlServices, { headers });
+  }
+
+  getServicioById(id: string): Observable<any> {
+    const token = localStorage.getItem('token');
+
+    const headers = new HttpHeaders({
+      'x-access-token': token as string,
+      'Content-type': 'application/json'
+    });
+
+    const servicioUrl = `${this.apiUrlServices}/${id}`;
+
+    return this.Http.get(servicioUrl, { headers });
   }
 }
+
+
+
